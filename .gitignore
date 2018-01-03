@@ -40,3 +40,16 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+build/
+bin/
+*~
+.gradle/
+.settings
+.project
+.classpath
+*.iml
+.idea/
+mockServerMatcher.log
+out/
+src/test/generated_tests/
