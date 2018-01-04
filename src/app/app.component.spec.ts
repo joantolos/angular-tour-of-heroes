@@ -10,7 +10,6 @@ import {MessageService} from "./message.service";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {AppRoutingModule} from "./app-routing.module";
 import {RouterTestingModule} from "@angular/router/testing";
-import {ROUTES} from "./routes/routes";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -26,7 +25,7 @@ describe('AppComponent', () => {
         BrowserModule,
         FormsModule,
         AppRoutingModule,
-        RouterTestingModule.withRoutes(ROUTES)
+        RouterTestingModule.withRoutes([])
       ],
       providers: [
         HeroService,

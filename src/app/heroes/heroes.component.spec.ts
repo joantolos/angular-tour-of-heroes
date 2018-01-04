@@ -5,10 +5,8 @@ import {FormsModule} from "@angular/forms";
 import {HeroDetailComponent} from "../hero-detail/hero-detail.component";
 import {MessageService} from "../message.service";
 import {HeroService} from "../hero.service";
-import {RouterModule} from "@angular/router";
 import {RouterTestingModule} from "@angular/router/testing";
 import {DashboardComponent} from "../dashboard/dashboard.component";
-import {ROUTES} from "../routes/routes";
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -23,7 +21,7 @@ describe('HeroesComponent', () => {
       ],
       imports: [
         FormsModule,
-        RouterTestingModule.withRoutes(ROUTES)
+        RouterTestingModule.withRoutes([])
       ],
       providers: [
         HeroService,

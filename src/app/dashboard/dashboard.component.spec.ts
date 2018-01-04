@@ -25,12 +25,7 @@ describe('DashboardComponent', () => {
       ],
       imports: [
         FormsModule,
-        RouterTestingModule.withRoutes([
-          { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-          { path: 'heroes', component: HeroesComponent },
-          { path: 'dashboard', component: DashboardComponent },
-          { path: 'detail/:id', component: HeroDetailComponent }
-        ])
+        RouterTestingModule.withRoutes([])
       ]
 
     })
