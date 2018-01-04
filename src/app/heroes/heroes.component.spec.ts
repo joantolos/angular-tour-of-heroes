@@ -3,6 +3,8 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {HeroesComponent} from './heroes.component';
 import {FormsModule} from "@angular/forms";
 import {HeroDetailComponent} from "../hero-detail/hero-detail.component";
+import {MessageService} from "../message.service";
+import {HeroService} from "../hero.service";
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -16,6 +18,10 @@ describe('HeroesComponent', () => {
       ],
       imports: [
         FormsModule
+      ],
+      providers: [
+        HeroService,
+        MessageService
       ]
     })
     .compileComponents();
