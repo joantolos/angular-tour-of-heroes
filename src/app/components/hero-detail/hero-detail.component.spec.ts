@@ -5,9 +5,8 @@ import {FormsModule} from "@angular/forms";
 import {RouterTestingModule} from "@angular/router/testing";
 import {HeroesComponent} from "../heroes/heroes.component";
 import {DashboardComponent} from "../dashboard/dashboard.component";
-import {HeroService} from "../hero.service";
-import {MessageService} from "../message.service";
-import {ROUTES} from "../routes/routes";
+import {HeroService} from "../../services/hero.service";
+import {MessageService} from "../../services/message.service";
 
 describe('HeroDetailComponent', () => {
   let component: HeroDetailComponent;
@@ -26,7 +25,7 @@ describe('HeroDetailComponent', () => {
       ],
       imports: [
         FormsModule,
-        RouterTestingModule.withRoutes(ROUTES)
+        RouterTestingModule.withRoutes([])
       ]
     })
     .compileComponents();
