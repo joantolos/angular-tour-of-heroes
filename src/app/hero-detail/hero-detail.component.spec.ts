@@ -7,6 +7,7 @@ import {HeroesComponent} from "../heroes/heroes.component";
 import {DashboardComponent} from "../dashboard/dashboard.component";
 import {HeroService} from "../hero.service";
 import {MessageService} from "../message.service";
+import {ROUTES} from "../../config/routes";
 
 describe('HeroDetailComponent', () => {
   let component: HeroDetailComponent;
@@ -25,12 +26,7 @@ describe('HeroDetailComponent', () => {
       ],
       imports: [
         FormsModule,
-        RouterTestingModule.withRoutes([
-          { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-          { path: 'heroes', component: HeroesComponent },
-          { path: 'dashboard', component: DashboardComponent },
-          { path: 'detail/:id', component: HeroDetailComponent }
-        ])
+        RouterTestingModule.withRoutes(ROUTES)
       ]
     })
     .compileComponents();

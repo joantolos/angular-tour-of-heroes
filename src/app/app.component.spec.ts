@@ -10,6 +10,7 @@ import {MessageService} from "./message.service";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {AppRoutingModule} from "./app-routing.module";
 import {RouterTestingModule} from "@angular/router/testing";
+import {ROUTES} from "../config/routes";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -25,12 +26,7 @@ describe('AppComponent', () => {
         BrowserModule,
         FormsModule,
         AppRoutingModule,
-        RouterTestingModule.withRoutes([
-          { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-          { path: 'heroes', component: HeroesComponent },
-          { path: 'dashboard', component: DashboardComponent },
-          { path: 'detail/:id', component: HeroDetailComponent }
-        ])
+        RouterTestingModule.withRoutes(ROUTES)
       ],
       providers: [
         HeroService,
