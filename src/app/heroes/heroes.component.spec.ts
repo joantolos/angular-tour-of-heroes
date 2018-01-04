@@ -5,6 +5,9 @@ import {FormsModule} from "@angular/forms";
 import {HeroDetailComponent} from "../hero-detail/hero-detail.component";
 import {MessageService} from "../message.service";
 import {HeroService} from "../hero.service";
+import {RouterModule} from "@angular/router";
+import {RouterTestingModule} from "@angular/router/testing";
+import {DashboardComponent} from "../dashboard/dashboard.component";
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -14,10 +17,17 @@ describe('HeroesComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         HeroesComponent,
-        HeroDetailComponent
+        HeroDetailComponent,
+        DashboardComponent
       ],
       imports: [
-        FormsModule
+        FormsModule,
+        RouterTestingModule.withRoutes([
+          { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+          { path: 'heroes', component: HeroesComponent },
+          { path: 'dashboard', component: DashboardComponent },
+          { path: 'detail/:id', component: HeroDetailComponent }
+        ])
       ],
       providers: [
         HeroService,

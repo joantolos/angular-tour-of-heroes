@@ -1,5 +1,5 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {async, TestBed} from '@angular/core/testing';
+import {AppComponent} from './app.component';
 import {HeroesComponent} from "./heroes/heroes.component";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
@@ -7,6 +7,9 @@ import {HeroDetailComponent} from "./hero-detail/hero-detail.component";
 import {MessagesComponent} from "./messages/messages.component";
 import {HeroService} from "./hero.service";
 import {MessageService} from "./message.service";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+import {AppRoutingModule} from "./app-routing.module";
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,11 +18,19 @@ describe('AppComponent', () => {
         AppComponent,
         HeroesComponent,
         HeroDetailComponent,
-        MessagesComponent
+        MessagesComponent,
+        DashboardComponent
       ],
       imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        AppRoutingModule,
+        RouterTestingModule.withRoutes([
+          { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+          { path: 'heroes', component: HeroesComponent },
+          { path: 'dashboard', component: DashboardComponent },
+          { path: 'detail/:id', component: HeroDetailComponent }
+        ])
       ],
       providers: [
         HeroService,
