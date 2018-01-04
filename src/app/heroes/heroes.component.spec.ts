@@ -8,7 +8,7 @@ import {HeroService} from "../hero.service";
 import {RouterModule} from "@angular/router";
 import {RouterTestingModule} from "@angular/router/testing";
 import {DashboardComponent} from "../dashboard/dashboard.component";
-import {ROUTES} from "../../config/routes";
+import {ROUTES} from "../routes/routes";
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;

@@ -7,7 +7,7 @@ import {HeroesComponent} from "../heroes/heroes.component";
 import {DashboardComponent} from "../dashboard/dashboard.component";
 import {HeroService} from "../hero.service";
 import {MessageService} from "../message.service";
-import {ROUTES} from "../../config/routes";
+import {ROUTES} from "../routes/routes";
 
 describe('HeroDetailComponent', () => {
   let component: HeroDetailComponent;

@@ -10,7 +10,7 @@ import {MessageService} from "./message.service";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {AppRoutingModule} from "./app-routing.module";
 import {RouterTestingModule} from "@angular/router/testing";
-import {ROUTES} from "../config/routes";
+import {ROUTES} from "./routes/routes";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
