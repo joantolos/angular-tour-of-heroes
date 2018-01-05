@@ -7,6 +7,8 @@ import {MessageService} from "../../services/message.service";
 import {HeroService} from "../../services/hero.service";
 import {RouterTestingModule} from "@angular/router/testing";
 import {DashboardComponent} from "../dashboard/dashboard.component";
+import {HttpClientModule} from "@angular/common/http";
+import {HeroSearchComponent} from "../hero-search/hero-search.component";
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -17,11 +19,13 @@ describe('HeroesComponent', () => {
       declarations: [
         HeroesComponent,
         HeroDetailComponent,
-        DashboardComponent
+        DashboardComponent,
+        HeroSearchComponent
       ],
       imports: [
         FormsModule,
-        RouterTestingModule.withRoutes([])
+        RouterTestingModule.withRoutes([]),
+        HttpClientModule
       ],
       providers: [
         HeroService,

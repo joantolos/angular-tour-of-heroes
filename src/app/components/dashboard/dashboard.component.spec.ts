@@ -7,6 +7,8 @@ import {HeroesComponent} from "../heroes/heroes.component";
 import {HeroDetailComponent} from "../hero-detail/hero-detail.component";
 import {FormsModule} from "@angular/forms";
 import {RouterTestingModule} from "@angular/router/testing";
+import {HttpClientModule} from "@angular/common/http";
+import {HeroSearchComponent} from "../hero-search/hero-search.component";
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -17,7 +19,8 @@ describe('DashboardComponent', () => {
       declarations: [
         DashboardComponent,
         HeroesComponent,
-        HeroDetailComponent
+        HeroDetailComponent,
+        HeroSearchComponent
       ],
       providers: [
         HeroService,
@@ -25,7 +28,8 @@ describe('DashboardComponent', () => {
       ],
       imports: [
         FormsModule,
-        RouterTestingModule.withRoutes([])
+        RouterTestingModule.withRoutes([]),
+        HttpClientModule
       ]
 
     })

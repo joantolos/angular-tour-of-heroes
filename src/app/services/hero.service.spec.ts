@@ -8,6 +8,11 @@ import {HeroDetailComponent} from "../components/hero-detail/hero-detail.compone
 import {FormsModule} from "@angular/forms";
 import {AppComponent} from "../app.component";
 import {MessageService} from "./message.service";
+import {HttpClientModule} from "@angular/common/http";
+import {InMemoryDataService} from "./in-memory-data.service";
+import {AppRoutingModule} from "../app-routing.module";
+import {RouterModule} from "@angular/router";
+import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 
 describe('HeroService', () => {
   beforeEach(() => {
@@ -15,6 +20,9 @@ describe('HeroService', () => {
       providers: [
         HeroService,
         MessageService
+      ],
+      imports: [
+        HttpClientModule
       ]
     });
   });

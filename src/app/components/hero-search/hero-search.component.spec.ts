@@ -1,42 +1,34 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {HeroDetailComponent} from './hero-detail.component';
-import {FormsModule} from "@angular/forms";
+import {HeroSearchComponent} from './hero-search.component';
 import {RouterTestingModule} from "@angular/router/testing";
-import {HeroesComponent} from "../heroes/heroes.component";
-import {DashboardComponent} from "../dashboard/dashboard.component";
 import {HeroService} from "../../services/hero.service";
 import {MessageService} from "../../services/message.service";
 import {HttpClientModule} from "@angular/common/http";
-import {HeroSearchComponent} from "../hero-search/hero-search.component";
 
-describe('HeroDetailComponent', () => {
-  let component: HeroDetailComponent;
-  let fixture: ComponentFixture<HeroDetailComponent>;
+describe('HeroSearchComponent', () => {
+  let component: HeroSearchComponent;
+  let fixture: ComponentFixture<HeroSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        HeroDetailComponent,
-        HeroesComponent,
-        DashboardComponent,
         HeroSearchComponent
+      ],
+      imports: [
+        RouterTestingModule.withRoutes([]),
+        HttpClientModule
       ],
       providers: [
         HeroService,
         MessageService
-      ],
-      imports: [
-        FormsModule,
-        RouterTestingModule.withRoutes([]),
-        HttpClientModule
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeroDetailComponent);
+    fixture = TestBed.createComponent(HeroSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -44,5 +36,4 @@ describe('HeroDetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

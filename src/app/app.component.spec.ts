@@ -10,6 +10,8 @@ import {MessageService} from "./services/message.service";
 import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import {AppRoutingModule} from "./app-routing.module";
 import {RouterTestingModule} from "@angular/router/testing";
+import {HttpClientModule} from "@angular/common/http";
+import {HeroSearchComponent} from "./components/hero-search/hero-search.component";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -19,13 +21,15 @@ describe('AppComponent', () => {
         HeroesComponent,
         HeroDetailComponent,
         MessagesComponent,
-        DashboardComponent
+        DashboardComponent,
+        HeroSearchComponent
       ],
       imports: [
         BrowserModule,
         FormsModule,
         AppRoutingModule,
-        RouterTestingModule.withRoutes([])
+        RouterTestingModule.withRoutes([]),
+        HttpClientModule
       ],
       providers: [
         HeroService,
