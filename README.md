@@ -1,3 +1,13 @@
+# Introduction
+
+This is my implementation of the [Tour of Heroes Angular tutorial](https://angular.io/tutorial/)
+
+The final app is successfully deployed on HEROKU at these url:
+
+[Tour of heroes](https://ng-tour-of-heroes-tutorial.herokuapp.com)
+
+I have written a blog post explaining the whole process and some experiences during the development.
+
 # AngularTourOfHeroes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
