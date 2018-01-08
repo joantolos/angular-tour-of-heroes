@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
+    "postinstall": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "private": true,
   "dependencies": {
