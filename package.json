@@ -4,11 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "./node_modules/webpack/bin/webpack.js -p --progress --config ./webpack.config.js && node server.js",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "webpack --config ./webpack.config.js"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
