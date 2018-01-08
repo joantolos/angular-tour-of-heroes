@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "webpack --config webpack.config.ts --env=prod"
+    "postinstall": "webpack --config webpack.config.js --env=prod"
   },
   "private": true,
   "dependencies": {
