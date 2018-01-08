@@ -8,13 +8,18 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.js']
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
+        test: /\.ts?$/,
+        loaders: [
+          {
+            loader: 'ts-loader',
+            options: { configFile: path.resolve(__dirname, 'tsconfig.json') }
+          }
+        ],
         exclude: /node_modules/
       },
       {
