@@ -7,7 +7,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "./node_modules/webpack/bin/webpack.js -p --progress"
+    "postinstall": "webpack -p --progress"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +30,6 @@
     "style-loader": "^0.19.1",
     "ts-loader": "^3.2.0",
     "ts-node": "~3.2.0",
-    "tslint": "~5.7.0",
     "tslint-loader": "^3.5.3",
     "typescript": "~2.4.2",
     "webpack": "^3.10.0",
