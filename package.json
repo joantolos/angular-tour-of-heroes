@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "webpack -p --config ./webpack.prod.config.js --progress"
+    "postinstall": "./node_modules/webpack/bin/webpack.js -p --config ./webpack.prod.config.js --progress"
   },
   "private": true,
   "dependencies": {
