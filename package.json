@@ -6,13 +6,14 @@
     "ng": "ng",
     "start": "node server.js",
     "test": "ng test",
-    "lint": "tslint \"src/**/*.ts\"",
-    "e2e": "protractor",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
     "postinstall": "./node_modules/webpack/bin/webpack.js -p --config ./webpack.prod.config.js --progress"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
+    "@angular/cli": "^1.6.3",
     "@angular/common": "^5.0.0",
     "@angular/core": "^5.0.0",
     "@angular/forms": "^5.0.0",
@@ -29,9 +30,9 @@
     "rxjs": "^5.5.2",
     "style-loader": "^0.19.1",
     "ts-loader": "^3.2.0",
-    "tslint-loader": "^3.5.3",
-    "tslint": "~5.7.0",
     "ts-node": "~3.2.0",
+    "tslint": "~5.7.0",
+    "tslint-loader": "^3.5.3",
     "typescript": "~2.4.2",
     "webpack": "^3.10.0",
     "zone.js": "^0.8.14"
