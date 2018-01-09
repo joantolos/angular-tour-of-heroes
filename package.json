@@ -14,7 +14,7 @@
   "environments": {
     "test": {
       "buildpacks": [
-        { "url": "heroku/karma" },
+        { "url": "heroku/karma-jasmine" },
         { "url": "https://github.com/heroku/heroku-buildpack-google-chrome" }
       ]
     }
