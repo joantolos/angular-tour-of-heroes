@@ -11,6 +11,14 @@
     "postinstall": "webpack -p --progress && npm test"
   },
   "private": true,
+  "environments": {
+    "test": {
+      "buildpacks": [
+        { "url": "heroku/nodejs" },
+        { "url": "https://github.com/heroku/heroku-buildpack-google-chrome" }
+      ]
+    }
+  },
   "dependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/cli": "^1.6.3",
