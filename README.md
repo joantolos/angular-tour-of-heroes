@@ -6,7 +6,7 @@ The final app is successfully deployed on HEROKU at these url:
 
 [Tour of heroes](https://ng-tour-of-heroes-tutorial.herokuapp.com)
 
-I have written a blog post explaining the whole process and some experiences during the development.
+I have written a blog post explaining the whole process and some experiences during the development. [Blog post](http://www.joantolos.com/blog/angulartutorial/)
 
 # AngularTourOfHeroes
 
